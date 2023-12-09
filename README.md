@@ -25,3 +25,6 @@ tlačítka pozadí hover: E8F1F2
 Nápisy: 13293D
 a menu hover: 1B98E0
 Nadpisy: 2E7AA5
+Nadpisy - písmo: font-family: font-family: 'Raleway', sans-serif;
+h1-
+Běžný text: 'Nunito Sans', sans-serif;
