@@ -26,11 +26,9 @@
 				<li class="menu__item"><a href="/uvod/" class="menu__link">Úvod</a></li>
 				<li class="menu__item"><a href="/onas/" class="menu__link">Onás</a></li>
 				<ul>
-					<li class="menu__item"><a href="/profil-firmy/" class="menu__link">Profil firmy</a></li>
-					<li class="menu__item"><a href="/historie-firmy/" class="menu__link">Historie firmy</a></li>
+					<li class="menu__item"><a href="/onas/" class="menu__link">O nás</a></li>
 					<li class="menu__item"><a href="/blog/" class="menu__link">Blog</a></li>
-					<li class="menu__item"><a href="/mistral-constructeur/" class="menu__link">Mistral Constructeur</a>
-					</li>
+					<li class="menu__item"><a href="/mistral-constructeur/" class="menu__link">Mistral Constructeur</a></li>
 				</ul>
 				<li class="menu__item"><a href="/produkty/" class="menu__link">Produkty</a></li>
 				<li class="menu__item"><a href="/poptavky-dotazy/" class="menu__link">Poptávky -dotazy</a></li>
@@ -43,7 +41,103 @@
 	<main class="main">
 		<h1>Poptávkový formulář</h1>
 
-	
+	<form action="http://formular.itgirls.cz" method="post">
+ 
+	<label for="jmeno">Jméno</label>	
+	<input type="text" name="jmeno" id="jmeno" maxlength="15" autofocus required >
+
+	<label for="prijmeni">Příjmení</label>	
+	<input type="text" name="prijmeni" id="prijmeni" maxlength="15" required >
+
+	<label for="telefon">Telefon</label>
+	<input type="tel" name="telefon" id="telefon" required >
+
+	<label for="email">E-mail</label>
+	<input type="email" name="email" id="email" required >
+
+	<label for="nazev_firmy">Název nazev_firmy</label>	
+	<input type="nazev_firmy" name="nazev_firmy" id="nazev_firmy" maxlength="20" >
+
+	<label for="cislo">IČ</label>
+	<input type="number" name="ic" id="ic">
+
+	<label for="pozice">Pozice / Oddělení</label>	
+	<input type="pozice" name="pozice" id="pozice" >
+
+    <label for="adresa">Adresa( ulice, č.p.)</label>	
+	<input type="adresa" name="adresa" id="adresa" >
+
+	<label for="mesto">Město</label>	
+	<input type="mesto" name="mesto" id="mesto" >
+
+	<label for="cislo">PSČ</label>
+	<input type="number" name="psc" id="psc" maxlenght="6">
+
+	<label for="vzkaz">Zanechte nám vzkaz</label>
+	<textarea name="vzkaz" id="vzkaz" cols="50" rows="10">
+	</textarea>
+
+	<h5>Vyberte čeho se týká váš dotaz:</h5>
+
+	<p>Potřebuji:</p>
+    
+	<input type="checkbox" name="pristroj" id="pristroj">
+	<label for="pristroj">přístroj na vodu</label>
+
+	<input type="checkbox" name="reklamace" id="reklamace">
+	<label for="reklamace">reklamaci</label>
+
+	<input type="checkbox" name="servis" id="servis">
+	<label for="servis">servis</label>
+
+	<input type="checkbox" name="oprava" id="oprava">
+	<label for="oprava">opravu</label>
+
+	<p>Poptávám pro:</p>
+
+	<input type="radio" name="poptavka" id="firma" value="firma">
+	<label for="firma">firmu</label>
+
+	<input type="radio" name="poptavka" id="domacnost" value="domacnost">
+	<label for="domacnost">domácnost</label>
+
+	<p>Model:</p>
+
+	<input type="checkbox" name="stojici" id="stojici">
+	<label for="stojici">samostatně stojící</label>
+
+	<input type="linka" name="linka" id="linka">
+	<label for="linka">na kuchyňskou linku</label>
+
+	<p>Voda:</p>
+
+	<input type="checkbox" name="horka" id="horka">
+	<label for="horka">horká</label>
+
+	<input type="checkbox" name="studena" id="studena">
+	<label for="studena">studená</label>
+
+	<input type="checkbox" name="perliva" id="perliva">
+	<label for="perliva">perlivá</label>
+
+	<input type="checkbox" name="pokojova" id="pokojova">
+	<label for="pokojova">pokojová</label>
+
+	<p>Chci objednat:</p>
+
+	<label for="material">Spotřební materiál</label>
+	<textarea name="material" id="material" cols="50" rows="5">
+	</textarea>
+
+	<label for="dily">Náhradní díly</label>
+	<textarea name="dily" id="dily" cols="50" rows="5">
+	</textarea>
+
+	<p>Vložením osobních údajů souhlasíte s podmínkami ochrany osobních údajů.</p>
+
+    <button type="submit">Odeslat zprávu</button>
+
+	</form>
 
 	</main>
 
