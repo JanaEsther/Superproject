@@ -1,17 +1,61 @@
-$tmava: #13293D;
-$tmavsi:#006494;
-$stredni: #247BA0; 
-$svetlejsi:#247BA0;
-$svetla:#1B98E0;
-$bezova:#F5F5F5;
+//barvy, písmo
+$dark: #13293D;
+$darker:#006494;
+$middle: #247BA0; 
+$lighter:#247BA0;
+$light:#1B98E0;
+$beige:#F5F5F5;
+$font-base:'Nunito Sans', sans-serif;
+$font-special:'Raleway', sans-serif; 
+$spacer: 30px;
 
-//hlavni nadpis
+//nadpisy
 
-h1{
-    color: $tmavsi;
+h1,h2,h3,h4,h5,h6{
+    color: $darker;
+    font-family: $font-special;
+    line-height: 1.25;
 }
 
 body{
-    color:tmava;
+    color:$dark;
     background-color: snow;
+    font-size:$font-base;
 }
+
+//menu + logo - header
+
+.logo {
+    width: 60px;
+    height: auto;
+  }
+
+  .hlavicka {
+    max-width: 1100px;
+    display: flex;
+    margin: 30px auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu ul {
+    list-style: none;
+    display: flex;
+    margin:0;
+    padding:0;
+    line-height: 1;
+  }
+
+  .menu a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color:$darker;
+    border-radius:30px;
+  }
+  
+
+
+
+
