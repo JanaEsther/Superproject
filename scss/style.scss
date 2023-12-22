@@ -1,61 +1,117 @@
 //barvy, písmo
 $dark: #13293D;
-$darker:#006494;
-$middle: #247BA0; 
-$lighter:#247BA0;
-$light:#1B98E0;
-$beige:#F5F5F5;
-$font-base:'Nunito Sans', sans-serif;
-$font-special:'Raleway', sans-serif; 
+$darker: #006494;
+$middle: #247BA0;
+$lighter: #247BA0;
+$light: #1B98E0;
+$bluish: #F5F5F5;
+$beige: #F2EEEE;
+$font-base: 'Nunito Sans', sans-serif;
+$font-special: 'Raleway', sans-serif;
 $spacer: 30px;
 
 //nadpisy
 
-h1,h2,h3,h4,h5,h6{
-    color: $darker;
-    font-family: $font-special;
-    line-height: 1.25;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-special;
+  line-height: 1.25;
+  color: $darker;
 }
 
-body{
-    color:$dark;
-    background-color: snow;
-    font-size:$font-base;
+//body parametry
+.main {
+  color: $dark;
+  background-color: snow;
+  font-family: $font-base;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-//menu + logo - header
+// logo - header
 
 .logo {
-    width: 60px;
-    height: auto;
-  }
+  width: 60px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 
-  .hlavicka {
-    max-width: 1100px;
-    display: flex;
-    margin: 30px auto;
-    justify-content: space-between;
-    align-items: center;
-  }
+//uvodni nadpisy
+.uvod-obsah__nadpis1 {
+  font-size: 52px;
+  font-family: $font-special;
+  margin-top: 0;
+  margin-right: 40%;
+  color: white;
+}
 
-  .menu ul {
-    list-style: none;
-    display: flex;
-    margin:0;
-    padding:0;
-    line-height: 1;
-  }
+.uvod-obsah__nadpis2 {
+  font-size: 24px;
+  margin-bottom: 0;
+  margin-right: 40%;
+  color: white;
+}
 
-  .menu a {
-    display: block;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    color:$darker;
-    border-radius:30px;
-  }
-  
+//header
+.header {
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+//menu 
+
+.menu__list,
+.menu__list__menu___list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  display: flex;
+  background-color: $beige;
+  float: left;
+}
+
+.menu_item,
+.menu__list__menu___list__menu__item {
+  margin-left: 20px;
+
+}
+
+.menu__link,
+.menu__list__menu___list__menu__link {
+  display: block;
+  padding: 10px 15px;
+  color: $darker;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 700;
+  border-right: 1px solid $darker;
+}
+
+.menu__list__menu___list {
+  display: none;
+}
 
 
 
 
+
+
+
+//patička
+
+.footer {
+  padding: 5px;
+  background-color: $beige;
+  color: $darker;
+  text-align: center;
+  font-weight: bold;
+}
