@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -9,62 +19,46 @@ h6 {
   color: #006494;
 }
 
-.main {
-  color: #13293D;
-  background-color: snow;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+.uvod {
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 350px;
 }
 
 .logo {
-  width: 60px;
+  width: 70px;
   height: auto;
   margin: 0;
+  margin-right: 10px;
   padding: 0;
 }
 
-.uvod-obsah__nadpis1 {
-  font-size: 52px;
-  font-family: "Raleway", sans-serif;
-  margin-top: 0;
-  margin-right: 40%;
-  color: white;
-}
-
-.uvod-obsah__nadpis2 {
-  font-size: 24px;
-  margin-bottom: 0;
-  margin-right: 40%;
-  color: white;
-}
-
 .header {
-  margin: 30px auto;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   max-width: 100%;
 }
 
-.menu__list,
-.menu__list__menu___list {
+.menu__list {
   margin: 0;
   padding: 0;
   list-style: none;
   line-height: 1;
   display: flex;
-  background-color: #F2EEEE;
+  background-color: #f2eeee;
   float: left;
 }
 
-.menu_item,
-.menu__list__menu___list__menu__item {
-  margin-left: 20px;
+.menu__item {
+  margin-left: 30px;
 }
 
-.menu__link,
-.menu__list__menu___list__menu__link {
+.menu__link {
   display: block;
   padding: 10px 15px;
   color: #006494;
@@ -74,13 +68,114 @@ h6 {
   border-right: 1px solid #006494;
 }
 
-.menu__list__menu___list {
-  display: none;
+/*INDEX PAGE*/
+.heading1 {
+  font-size: 52px;
+  font-family: "Raleway", sans-serif;
+  margin-top: 0;
+  color: white;
+  font-weight: 400;
+  padding-top: 100px;
+}
+
+.heading2 {
+  font-size: 24px;
+  margin-bottom: 0;
+  color: white;
+  font-weight: 400;
+}
+
+.index-content {
+  margin-left: 100px;
+}
+
+.mistral-sinop {
+  display: flex;
+  justify-content: center;
+}
+
+.mistral-content {
+  margin-right: 50px;
+}
+
+.mistral-content__heading,
+.sinop-content__heading {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 30px;
+  font-weight: 300;
+}
+
+.mistral-content__heading2,
+.sinop-content__heading2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+.mistral-content__logo,
+.sinop-content__logo {
+  width: 180px;
+  height: auto;
+  text-align: center;
+  align-items: center;
+  margin-left: 200px;
+}
+
+.sinop-content__logo {
+  margin-left: 150px;
+}
+
+.mistral-content__products,
+.sinop-content__products {
+  text-align: center;
+  font-weight: 600;
+}
+
+.button {
+  color: #13293d;
+  background-color: #f2eeee;
+  font-weight: 400;
+  padding: 15px 20px;
+  margin-right: 20px;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 80px;
+  box-shadow: 0px 3px 3px -3px #247ba0;
+}
+
+/*FAQ PAGE*/
+.main {
+  margin: 0 50px;
+}
+
+.faq__heading1 {
+  font-size: 52px;
+  font-family: "Raleway", sans-serif;
+  color: #006494;
+  font-weight: 400;
+  text-align: center;
+}
+
+.faq__heading3 {
+  font-weight: 400px;
+  background-color: #f5f5f5;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 5px;
+}
+
+/*CONTACT PAGE*/
+.contact__heading1 {
+  font-size: 52px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .footer {
-  padding: 5px;
-  background-color: #F2EEEE;
+  padding: 3px;
+  background-color: #f2eeee;
   color: #006494;
   text-align: center;
   font-weight: bold;

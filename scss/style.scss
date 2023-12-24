@@ -1,13 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
 //barvy, písmo
-$dark: #13293D;
+$dark: #13293d;
 $darker: #006494;
-$middle: #247BA0;
-$lighter: #247BA0;
-$light: #1B98E0;
-$bluish: #F5F5F5;
-$beige: #F2EEEE;
-$font-base: 'Nunito Sans', sans-serif;
-$font-special: 'Raleway', sans-serif;
+$middle: #247ba0;
+$lighter: #247ba0;
+$light: #1b98e0;
+$bluish: #f5f5f5;
+$beige: #f2eeee;
+$font-base: "Nunito Sans", sans-serif;
+$font-special: "Raleway", sans-serif;
 $spacer: 30px;
 
 //nadpisy
@@ -23,53 +32,40 @@ h6 {
   color: $darker;
 }
 
-//body parametry
-.main {
-  color: $dark;
-  background-color: snow;
-  font-family: $font-base;
-  font-size: 16px;
-  line-height: 1.5;
+//MAIN SECTION WITH BIG BACKGROUND PICTURE
+
+.index{
+  background-image:url(images/background.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  width: 100%;
+  height: 350px;
+
 }
 
-// logo - header
+//LOGO-HEADER
 
 .logo {
-  width: 60px;
+  width: 70px;
   height: auto;
   margin: 0;
+  margin-right: 10px;
   padding: 0;
 }
 
-//uvodni nadpisy
-.uvod-obsah__nadpis1 {
-  font-size: 52px;
-  font-family: $font-special;
-  margin-top: 0;
-  margin-right: 40%;
-  color: white;
-}
-
-.uvod-obsah__nadpis2 {
-  font-size: 24px;
-  margin-bottom: 0;
-  margin-right: 40%;
-  color: white;
-}
-
-//header
+//HEADER
 .header {
-  margin: 30px auto;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   max-width: 100%;
+
 }
 
-//menu 
-
-.menu__list,
-.menu__list__menu___list {
+//MENU
+.menu__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -79,14 +75,12 @@ h6 {
   float: left;
 }
 
-.menu_item,
-.menu__list__menu___list__menu__item {
-  margin-left: 20px;
-
+.menu__item {
+  margin-left:30px;
+  
 }
 
-.menu__link,
-.menu__list__menu___list__menu__link {
+.menu__link {
   display: block;
   padding: 10px 15px;
   color: $darker;
@@ -96,20 +90,132 @@ h6 {
   border-right: 1px solid $darker;
 }
 
-.menu__list__menu___list {
-  display: none;
+
+/*INDEX PAGE*/
+//HEADINGS
+.heading1 {
+  font-size: 52px;
+  font-family: $font-special;
+  margin-top: 0;
+  color: white;
+  font-weight: 400;
+  padding-top: 100px;
+}
+
+.heading2 {
+  font-size: 24px;
+  margin-bottom: 0;
+  color: white;
+  font-weight: 400;
+
+}
+
+.index-content{
+  margin-left: 100px;
+ 
+}
+
+//INDEX - MAIN SECTION
+.mistral-sinop {
+  display: flex;
+  justify-content: center;
+}
+
+.mistral-content {
+  margin-right: 50px;
+}
+
+.mistral-content__heading,
+.sinop-content__heading {
+  text-align: center;
+  font-size: 24px;
+  margin-top:30px;
+  font-weight: 300;
+}
+
+.mistral-content__heading2,
+.sinop-content__heading2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top:30px;
+  font-weight: 500;
+}
+
+
+.mistral-content__logo,
+.sinop-content__logo {
+  width: 120px;
+  height: auto;
+  text-align: center;
+  align-items: center;
+  margin-left: 200px;
+  
+}
+
+.sinop-content__logo{
+  margin-left: 150px;
+}
+
+.mistral-content__products,
+.sinop-content__products{
+  text-align:center;
+  font-weight: 600;
+}
+
+.button{
+  color:$dark;
+  background-color: $beige;
+  font-weight: 400;
+  padding: 15px 20px;
+  margin-right: 20px;
+  border:0;
+  border-radius: 5px;
+  margin-bottom: 80px;
+  box-shadow: 0px 3px 3px -3px $lighter; 
+
+}
+
+
+/*FAQ PAGE*/
+
+.main{
+margin: 0 50px;
+
+}
+
+.faq__heading1{
+  font-size: 52px;
+  font-family: $font-special;
+  color:$darker;
+  font-weight: 400;
+  text-align: center;
+  
+}
+
+.faq__heading3{
+  font-weight: 400px;
+  background-color: $bluish;
+  font-family: $font-special;
+  padding: 10px 5px;
+}
+
+/*CONTACT PAGE*/
+
+.contact__heading1{
+  font-size: 52px;
+  font-family:$font-special;
+  text-align: center;
+  padding-top: 30px;
 }
 
 
 
 
 
-
-
-//patička
+//FOOTER
 
 .footer {
-  padding: 5px;
+  padding: 3px;
   background-color: $beige;
   color: $darker;
   text-align: center;
