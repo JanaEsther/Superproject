@@ -122,7 +122,8 @@ h6 {
 }
 
 .mistral-content {
-  margin-right: 50px;
+  margin-right: 80px;
+  margin-left: 30px;
 }
 
 .mistral-content__heading,
@@ -144,22 +145,27 @@ h6 {
 
 .mistral-content__logo,
 .sinop-content__logo {
-  width: 120px;
+  width: 110px;
   height: auto;
   text-align: center;
   align-items: center;
-  margin-left: 200px;
+  margin-left: 240px;
   
 }
 
 .sinop-content__logo{
-  margin-left: 150px;
+  margin-left: 190px;
+  width: 100px;
 }
 
 .mistral-content__products,
 .sinop-content__products{
   text-align:center;
   font-weight: 600;
+}
+
+.mistral-content__products{
+  margin-bottom: 20px;
 }
 
 .button{
@@ -174,7 +180,20 @@ h6 {
   box-shadow: 0px 3px 3px -3px $lighter; 
 
 }
+/*MISTRAL PAGE*/
 
+.mistral__heading1{
+  font-size: 52px;
+  font-family: $font-special;
+  color:$darker;
+  font-weight: 400;
+  text-align: center;
+}
+
+.mistral__heading2{
+  text-align: center;
+  font-weight: 400;
+}
 
 /*FAQ PAGE*/
 
@@ -205,9 +224,9 @@ margin: 0 50px;
   font-size: 52px;
   font-family:$font-special;
   text-align: center;
+  align-items: center;
   padding-top: 30px;
 }
-
 
 
 
