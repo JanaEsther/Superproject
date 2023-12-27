@@ -19,6 +19,21 @@ h6 {
   color: #006494;
 }
 
+.main__heading1 {
+  font-size: 32px;
+  font-family: "Raleway", sans-serif;
+  color: #006494;
+  font-weight: 400;
+  text-align: center;
+}
+
+.main {
+  margin: 30px 50px;
+  padding: 40px 30px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+}
+
 .index {
   background-image: url(images/background.jpg);
   background-repeat: no-repeat;
@@ -34,6 +49,7 @@ h6 {
   margin: 0;
   margin-right: 10px;
   padding: 0;
+  float: left;
 }
 
 .header {
@@ -44,30 +60,69 @@ h6 {
   max-width: 100%;
 }
 
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.menu__toggler {
+  cursor: pointer;
+}
+
 .menu__list {
+  display: none;
   margin: 0;
   padding: 0;
   list-style: none;
-  line-height: 1;
-  display: flex;
   background-color: #f2eeee;
-  float: left;
 }
 
 .menu__item {
-  margin-left: 30px;
+  border-bottom: 1px solid #006494;
 }
 
 .menu__link {
   display: block;
-  padding: 10px 15px;
-  color: #006494;
+  padding: 15px;
   text-decoration: none;
-  font-size: larger;
-  font-weight: 700;
-  border-right: 1px solid #006494;
+  color: #006494;
 }
 
+.menu__link:hover {
+  background-color: #1b98e0;
+  color: white;
+}
+
+.menu__checkbox:checked ~ .menu__list {
+  display: block;
+}
+
+@media screen and (min-width: 700px) {
+  .menu__toggler {
+    display: none;
+  }
+  .menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1;
+    display: flex;
+    background-color: #f2eeee;
+  }
+  .menu__item {
+    border-bottom: 0;
+  }
+  .menu__link {
+    display: block;
+    padding: 10px 15px;
+    color: #006494;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 700;
+    border-right: 1px solid #006494;
+  }
+}
+/*-----------------------------------------------------------------------*/
 /*INDEX PAGE*/
 .heading1 {
   font-size: 52px;
@@ -95,8 +150,9 @@ h6 {
 }
 
 .mistral-content {
-  margin-right: 80px;
+  margin-right: 120px;
   margin-left: 30px;
+  margin-bottom: 70px;
 }
 
 .mistral-content__heading,
@@ -121,7 +177,7 @@ h6 {
   height: auto;
   text-align: center;
   align-items: center;
-  margin-left: 240px;
+  margin-left: 250px;
 }
 
 .sinop-content__logo {
@@ -136,7 +192,11 @@ h6 {
 }
 
 .mistral-content__products {
-  margin-bottom: 20px;
+  margin: 0;
+}
+
+.sinop-content__products {
+  padding-bottom: 20px;
 }
 
 .button {
@@ -151,47 +211,195 @@ h6 {
   box-shadow: 0px 3px 3px -3px #247ba0;
 }
 
+/*------------------------------------------*/
 /*MISTRAL PAGE*/
-.mistral__heading1 {
-  font-size: 52px;
-  font-family: "Raleway", sans-serif;
-  color: #006494;
-  font-weight: 400;
-  text-align: center;
-}
-
 .mistral__heading2 {
   text-align: center;
   font-weight: 400;
 }
 
+.img__mistral_historie {
+  width: 600px;
+  height: auto;
+  float: right;
+}
+
+.icon {
+  margin: 10px;
+  height: 48px;
+  width: auto;
+}
+
+.mistral__obsah {
+  display: flex;
+  padding: 80px 30px #f5f5f5;
+  border: 2px solid #f5f5f5;
+  border-radius: 10px;
+  justify-content: center;
+  box-shadow: 0px 5px 5px -5px #f5f5f5;
+  margin: 20px 0;
+}
+
+.obsah2 {
+  flex-direction: row-reverse;
+  margin-top: 30px;
+}
+
+.mistral__text {
+  flex: 0 0 30%;
+  margin-right: 40px;
+  background-color: #f5f5f5;
+  padding: 50px 30px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px -3px #f5f5f5;
+}
+
+.img__mistral_historie2 {
+  margin-right: 40px;
+  margin-left: 200px;
+}
+
+.img__mistral_tovarna,
+.img__mistral_budova,
+.img__mistral_letiste {
+  height: 300px;
+  width: auto;
+}
+
+.img__mistral_budova {
+  margin-right: 30px;
+}
+
+.mistral__text_map {
+  width: 20%;
+  background-color: #f5f5f5;
+  padding: 20px 30px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px -3px #f5f5f5;
+}
+
+.mistral__map {
+  margin-bottom: 20px;
+  align-items: right;
+}
+
 /*FAQ PAGE*/
-.main {
-  margin: 0 50px;
-}
-
-.faq__heading1 {
-  font-size: 52px;
-  font-family: "Raleway", sans-serif;
-  color: #006494;
-  font-weight: 400;
-  text-align: center;
-}
-
 .faq__heading3 {
   font-weight: 400px;
   background-color: #f5f5f5;
   font-family: "Raleway", sans-serif;
   padding: 10px 5px;
+  box-shadow: 0px 3px 3px -3px #f5f5f5;
 }
 
+/*ENQUIRY - QUESTIONS PAGE*/
+form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-field {
+  margin-bottom: 30px;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field number,
+.form-field tel {
+  width: 100%;
+  border: 1px solid #006494;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px 20px;
+}
+
+.form-field input[type=text]:focus,
+.form-field input[type=number]:focus,
+.form-field input[type=email]:focus,
+.form-field input[type=tel]:focus,
+.form-field textarea:focus {
+  outline: 0;
+  border: 2px solid #1b98e0;
+  background-color: #edf3f7;
+}
+
+input[type=checkbox]:focus,
+input[type=radio]:focus {
+  outline-color: #1b98e0;
+}
+
+.form-field label {
+  display: block;
+  font-size: 16px;
+  color: #13293d;
+}
+
+.required {
+  color: red;
+}
+
+.form-checkbox {
+  margin-bottom: 10px;
+}
+
+.form-checkbox input,
+.form-radio input {
+  width: 15px;
+  height: 15px;
+}
+
+.form-checkbox input:checked + label {
+  color: #1b98e0;
+  font-weight: bold;
+}
+
+.form-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #13293d;
+}
+
+.button-submit {
+  background-color: #1b98e0;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 25px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+}
+
+.button-submit:hover {
+  background-color: #247ba0;
+}
+
+@media screen and (min-width: 640px) {
+  form {
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  form {
+    margin-left: 400px;
+    max-width: 600px;
+  }
+  .enquiry {
+    display: flex;
+  }
+  .form-field_half {
+    flex: 0 0 50%;
+  }
+  .first {
+    margin-right: 50px;
+    margin-top: 10px;
+  }
+}
+/*--------------------------------------------*/
 /*CONTACT PAGE*/
-.contact__heading1 {
-  font-size: 52px;
-  font-family: "Raleway", sans-serif;
-  text-align: center;
-  align-items: center;
-  padding-top: 30px;
+.contact {
+  display: flex;
 }
 
 .footer {

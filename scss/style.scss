@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 :after,
 :before {
@@ -32,16 +33,30 @@ h6 {
   color: $darker;
 }
 
+.main__heading1 {
+  font-size: 32px;
+  font-family: $font-special;
+  color: $darker;
+  font-weight: 400;
+  text-align: center;
+}
+
+.main {
+  margin: 30px 50px;
+  padding: 40px 30px;
+  font-family: $font-base;
+  font-size: 16px;
+}
+
 //MAIN SECTION WITH BIG BACKGROUND PICTURE
 
-.index{
-  background-image:url(images/background.jpg);
+.index {
+  background-image: url(images/background.jpg);
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   width: 100%;
   height: 350px;
-
 }
 
 //LOGO-HEADER
@@ -52,6 +67,7 @@ h6 {
   margin: 0;
   margin-right: 10px;
   padding: 0;
+  float:left;
 }
 
 //HEADER
@@ -61,10 +77,54 @@ h6 {
   align-items: center;
   justify-content: center;
   max-width: 100%;
-
 }
 
 //MENU
+
+
+.menu__checkbox{
+  position: absolute;
+  left: -9999px;
+}
+
+.menu__toggler{
+  cursor: pointer;
+}
+
+.menu__list{
+  display:none;
+  margin:0;
+  padding:0;
+  list-style: none;
+  background-color: $beige;
+}
+
+.menu__item{
+  border-bottom: 1px solid $darker;
+}
+
+.menu__link{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color:$darker;
+}
+
+.menu__link:hover{
+  background-color: $light;
+  color: white;
+}
+
+
+.menu__checkbox:checked ~ .menu__list{
+  display: block;
+}
+
+
+@media screen and (min-width: 700px){
+.menu__toggler{
+ display: none; 
+}
 .menu__list {
   margin: 0;
   padding: 0;
@@ -72,12 +132,12 @@ h6 {
   line-height: 1;
   display: flex;
   background-color: $beige;
-  float: left;
+  
 }
 
 .menu__item {
-  margin-left:30px;
-  
+ 
+  border-bottom: 0;
 }
 
 .menu__link {
@@ -91,6 +151,8 @@ h6 {
 }
 
 
+}
+/*-----------------------------------------------------------------------*/
 /*INDEX PAGE*/
 //HEADINGS
 .heading1 {
@@ -107,12 +169,10 @@ h6 {
   margin-bottom: 0;
   color: white;
   font-weight: 400;
-
 }
 
-.index-content{
+.index-content {
   margin-left: 100px;
- 
 }
 
 //INDEX - MAIN SECTION
@@ -122,15 +182,16 @@ h6 {
 }
 
 .mistral-content {
-  margin-right: 80px;
+  margin-right: 120px;
   margin-left: 30px;
+  margin-bottom: 70px;
 }
 
 .mistral-content__heading,
 .sinop-content__heading {
   text-align: center;
   font-size: 24px;
-  margin-top:30px;
+  margin-top: 30px;
   font-weight: 300;
 }
 
@@ -138,10 +199,9 @@ h6 {
 .sinop-content__heading2 {
   text-align: center;
   font-size: 30px;
-  margin-top:30px;
+  margin-top: 30px;
   font-weight: 500;
 }
-
 
 .mistral-content__logo,
 .sinop-content__logo {
@@ -149,86 +209,245 @@ h6 {
   height: auto;
   text-align: center;
   align-items: center;
-  margin-left: 240px;
-  
+  margin-left: 250px;
 }
 
-.sinop-content__logo{
+.sinop-content__logo {
   margin-left: 190px;
   width: 100px;
 }
 
 .mistral-content__products,
-.sinop-content__products{
-  text-align:center;
+.sinop-content__products {
+  text-align: center;
   font-weight: 600;
 }
 
-.mistral-content__products{
-  margin-bottom: 20px;
+.mistral-content__products {
+  margin: 0;
 }
 
-.button{
-  color:$dark;
+.sinop-content__products {
+  padding-bottom: 20px;
+}
+
+.button {
+  color: $dark;
   background-color: $beige;
   font-weight: 400;
   padding: 15px 20px;
   margin-right: 20px;
-  border:0;
+  border: 0;
   border-radius: 5px;
   margin-bottom: 80px;
-  box-shadow: 0px 3px 3px -3px $lighter; 
-
+  box-shadow: 0px 3px 3px -3px $lighter;
 }
+/*------------------------------------------*/
 /*MISTRAL PAGE*/
 
-.mistral__heading1{
-  font-size: 52px;
-  font-family: $font-special;
-  color:$darker;
-  font-weight: 400;
+.mistral__heading2 {
   text-align: center;
+  font-weight: 400;
 }
 
-.mistral__heading2{
-  text-align: center;
-  font-weight: 400;
+.img__mistral_historie {
+  width: 600px;
+  height: auto;
+  float: right;
+}
+
+.icon {
+  margin: 10px;
+  height: 48px;
+  width: auto;
+}
+
+.mistral__obsah {
+  display: flex;
+  padding: 80px 30px $bluish;
+  border: 2px solid $bluish;
+  border-radius: 10px;
+  justify-content: center;
+  box-shadow: 0px 5px 5px -5px $bluish;
+  margin: 20px 0;
+}
+
+.obsah2 {
+  flex-direction: row-reverse;
+  margin-top: 30px;
+}
+
+.mistral__text {
+  flex: 0 0 30%;
+  margin-right: 40px;
+  background-color: $bluish;
+  padding: 50px 30px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px -3px $bluish;
+}
+
+.img__mistral_historie2 {
+  margin-right: 40px;
+  margin-left: 200px;
+}
+
+.img__mistral_tovarna,
+.img__mistral_budova,
+.img__mistral_letiste{
+  height: 300px;
+  width:auto;
+}
+
+.img__mistral_budova{
+  margin-right: 30px;
+}
+
+.mistral__text_map {
+  width: 20%;
+  background-color: $bluish;
+  padding: 20px 30px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px -3px $bluish;
+  
+}
+
+.mistral__map {
+  margin-bottom: 20px;
+  align-items: right;
 }
 
 /*FAQ PAGE*/
 
-.main{
-margin: 0 50px;
-
-}
-
-.faq__heading1{
-  font-size: 52px;
-  font-family: $font-special;
-  color:$darker;
-  font-weight: 400;
-  text-align: center;
-  
-}
-
-.faq__heading3{
+.faq__heading3 {
   font-weight: 400px;
   background-color: $bluish;
   font-family: $font-special;
   padding: 10px 5px;
+  box-shadow: 0px 3px 3px -3px $bluish;
+}
+/*ENQUIRY - QUESTIONS PAGE*/
+
+form {
+  width: 100%;
+  max-width: 600px;
 }
 
+.form-field {
+  margin-bottom: 30px;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field number,
+.form-field tel {
+  width: 100%;
+  border: 1px solid $darker;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px 20px;
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="number"]:focus,
+.form-field input[type="email"]:focus,
+.form-field input[type="tel"]:focus,
+.form-field textarea:focus {
+  outline: 0;
+  border: 2px solid $light;
+  background-color: #edf3f7;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline-color: $light;
+}
+
+.form-field label {
+  display: block;
+  font-size: 16px;
+  color: $dark;
+}
+
+.required {
+  color: red;
+}
+
+.form-checkbox {
+  margin-bottom: 10px;
+}
+
+.form-checkbox input,
+.form-radio input {
+  width: 15px;
+  height: 15px;
+}
+
+.form-checkbox input:checked + label{
+  color: $light;
+  font-weight: bold;
+}
+
+.form-text {
+  font-family: $font-base;
+  font-size: 16px;
+  color: $dark;
+}
+
+.button-submit {
+  background-color: $light;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 25px;
+  font-family: $font-base;
+  font-size: 16px;
+}
+
+.button-submit:hover {
+  background-color: $middle;
+}
+
+@media screen and (min-width: 640px){
+  form{
+    max-width: 300px;
+  }
+} 
+
+@media screen and (min-width: 1100px) {
+  form {
+    margin-left: 400px;
+    max-width: 600px;
+  }
+
+  .enquiry {
+    display: flex;
+  }
+
+  .form-field_half {
+    flex: 0 0 50%;
+  }
+
+  .first {
+    margin-right: 50px;
+    margin-top: 10px;
+  }
+}
+/*--------------------------------------------*/
 /*CONTACT PAGE*/
 
-.contact__heading1{
-  font-size: 52px;
-  font-family:$font-special;
-  text-align: center;
-  align-items: center;
-  padding-top: 30px;
+.contact{
+  display: flex;
 }
 
+.contact__obsah{
+  flex: 0 0 flex 25% - 20px;
+}
 
+img__contact-write{
+  margin-left: 20px;
+}
 
 
 //FOOTER

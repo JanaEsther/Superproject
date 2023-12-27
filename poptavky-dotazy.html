@@ -21,10 +21,14 @@
 	<header class="header">
 		<img class="logo" src="Logos/H2O_logo.svg" alt="logo H2O" />
 
-
 		<nav class="menu">
+
+			<input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+			
+			<label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
+
 			<ul class="menu__list">
-				<li class="menu__item"><a href="/uvod.html" class="menu__link">Úvod</a></li>
+				<li class="menu__item"><a href="/uvod/" class="menu__link">Úvod</a></li>
 				<li class="menu__item"><a href="/onas/" class="menu__link">O nás</a></li>
 				<li class="menu__item"><a href="/mistral-constructeur/" class="menu__link">Mistral Constructeur</a></li>
 				<li class="menu__item"><a href="/produkty/" class="menu__link">Produkty</a></li>
@@ -37,104 +41,157 @@
 		</nav>
 	</header>
 	<main class="main">
-		<h1>Poptávkový formulář</h1>
+		<h1 class="main__heading1">Poptávkový formulář</h1>
 
-	<form action="http://formular.itgirls.cz" method="post">
- 
-	<label for="jmeno">Jméno</label>	
-	<input type="text" name="jmeno" id="jmeno" maxlength="15" autofocus required >
+	<form class="enquiry" action="https://submit-form.com/jvVwBunI" method="post">
+	<input type="hidden" name="_redirect" value="https://www.h2o-logic.cz">
 
-	<label for="prijmeni">Příjmení</label>	
+<div class="form-field_half  first">
+	<div class="form-field">
+	<label for="jmeno">Jméno <span class="required">*</span></label>	
+	<input type="text" name="jmeno" id="jmeno"  maxlength="15" autofocus required >
+	</div>
+	<div class="form-field">
+	<label for="prijmeni">Příjmení <span class="required">*</span></label>	
 	<input type="text" name="prijmeni" id="prijmeni" maxlength="15" required >
+	</div>
 
-	<label for="telefon">Telefon</label>
+	<div class="form-field">
+	<label for="telefon">Telefon <span class="required">*</span></label>
 	<input type="tel" name="telefon" id="telefon" required >
+	</div>
 
-	<label for="email">E-mail</label>
+	<div class="form-field">
+	<label for="email">E-mail <span class="required">*</span></label>
 	<input type="email" name="email" id="email" required >
+	</div>
 
-	<label for="nazev_firmy">Název nazev_firmy</label>	
-	<input type="nazev_firmy" name="nazev_firmy" id="nazev_firmy" maxlength="20" >
+	<div class="form-field">
+	<label for="nazev_firmy">Název firmy</label>	
+	<input type="text" name="nazev_firmy" id="nazev_firmy" maxlength="20" >
+	</div>
 
+	<div class="form-field">
 	<label for="cislo">IČ</label>
 	<input type="number" name="ic" id="ic">
+	</div>
 
+	<div class="form-field">
 	<label for="pozice">Pozice / Oddělení</label>	
-	<input type="pozice" name="pozice" id="pozice" >
+	<input type="text" name="pozice" id="pozice" >
+	</div>
 
+	<div class="form-field">
     <label for="adresa">Adresa( ulice, č.p.)</label>	
-	<input type="adresa" name="adresa" id="adresa" >
+	<input type="text" name="adresa" id="adresa" >
+	</div>
 
+	<div class="form-field">
 	<label for="mesto">Město</label>	
-	<input type="mesto" name="mesto" id="mesto" >
+	<input type="text" name="mesto" id="mesto" >
+	</div>
 
+	<div class="form-field">
 	<label for="cislo">PSČ</label>
 	<input type="number" name="psc" id="psc" maxlenght="6">
+	</div>
 
+	<div class="form-field">
 	<label for="vzkaz">Zanechte nám vzkaz</label>
-	<textarea name="vzkaz" id="vzkaz" cols="50" rows="10">
+	<textarea name="textarea" id="vzkaz" cols="50" rows="10">
 	</textarea>
+	</div>
+</div>
+<div class="form-field_half">
+	<h4 class="form-heading4">Vyberte čeho se týká váš dotaz:</h4>
 
-	<h5>Vyberte čeho se týká váš dotaz:</h5>
-
-	<p>Potřebuji:</p>
+	<p class="form-text">Potřebuji:</p>
     
+	<div class="form-checkbox">
 	<input type="checkbox" name="pristroj" id="pristroj">
 	<label for="pristroj">přístroj na vodu</label>
+	</div>
 
+	<div class="form-checkbox">
 	<input type="checkbox" name="reklamace" id="reklamace">
 	<label for="reklamace">reklamaci</label>
+	</div>
 
+	<div class="form-checkbox">
 	<input type="checkbox" name="servis" id="servis">
 	<label for="servis">servis</label>
+	</div>
 
+	<div class="form-checkbox">
 	<input type="checkbox" name="oprava" id="oprava">
 	<label for="oprava">opravu</label>
+	</div>
 
-	<p>Poptávám pro:</p>
+	<p class="form-text">Poptávám pro:</p>
 
+	<div class="form-radio">
 	<input type="radio" name="poptavka" id="firma" value="firma">
 	<label for="firma">firmu</label>
+	</div>
 
+	<div class="form-radio">
 	<input type="radio" name="poptavka" id="domacnost" value="domacnost">
 	<label for="domacnost">domácnost</label>
+	</div>
 
-	<p>Model:</p>
+	<p class="form-text">Model:</p>
 
+	<div class="form-checkbox">
 	<input type="checkbox" name="stojici" id="stojici">
 	<label for="stojici">samostatně stojící</label>
+	</div>
 
-	<input type="linka" name="linka" id="linka">
+	<div class="form-checkbox">
+	<input type="checkbox" name="linka" id="linka">
 	<label for="linka">na kuchyňskou linku</label>
+	</div>
 
-	<p>Voda:</p>
+	<p class="form-text">Voda:</p>
 
+	<div class="form-checkbox">
 	<input type="checkbox" name="horka" id="horka">
 	<label for="horka">horká</label>
+	</div>
 
+	<div class="form-checkbox">
 	<input type="checkbox" name="studena" id="studena">
 	<label for="studena">studená</label>
+	</div>
 
+	<div class="form-checkbox">
 	<input type="checkbox" name="perliva" id="perliva">
 	<label for="perliva">perlivá</label>
+	</div>
 
+	<div class="form-checkbox">
 	<input type="checkbox" name="pokojova" id="pokojova">
 	<label for="pokojova">pokojová</label>
+	</div>
 
-	<p>Chci objednat:</p>
+	<p class="form-text">Chci objednat:</p>
 
+	<div class="form-field">
 	<label for="material">Spotřební materiál</label>
 	<textarea name="material" id="material" cols="50" rows="5">
 	</textarea>
+	</div>
 
+	<div class="form-field">
 	<label for="dily">Náhradní díly</label>
 	<textarea name="dily" id="dily" cols="50" rows="5">
 	</textarea>
+	</div>
 
 	<p>Vložením osobních údajů souhlasíte s podmínkami ochrany osobních údajů.</p>
+	<p><span class="required">*</span> Povinné údaje</p>
 
-    <button type="submit">Odeslat zprávu</button>
-
+    <button class= "button-submit" type="submit">Odeslat zprávu</button>
+</div>
 	</form>
 
 	</main>
