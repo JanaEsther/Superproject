@@ -4,8 +4,8 @@
 
 // písmo
 
-$font-base: "Nunito Sans", sans-serif;
-$font-special: "Raleway", sans-serif;
+$font-base: 'Nunito Sans', sans-serif; 
+$font-special: 'Raleway', sans-serif;
 $spacer: 30px;
 
 .main__heading1 {
@@ -49,6 +49,7 @@ $spacer: 30px;
   margin-right: 10px;
   padding: 0;
   float: left;
+  position: sticky;
 }
 
 //HEADER
@@ -56,8 +57,9 @@ $spacer: 30px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   max-width: 100%;
+
 }
 
 //MENU
@@ -136,16 +138,18 @@ $spacer: 30px;
   font-family: $font-special;
   margin-top: 0;
   color: white;
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 100px;
+  box-shadow: 0px 3px 3px -3px white;
 }
 
 .heading2 {
   font-size: 24px;
   margin-bottom: 0;
   color: white;
-  font-weight: 400;
+  font-weight: 500;
   padding-bottom: 40px;
+  box-shadow: 0px 3px 3px -3px white;
 }
 
 .index-content {
@@ -170,6 +174,7 @@ $spacer: 30px;
   font-size: 24px;
   margin-top: 30px;
   font-weight: 300;
+  color: colors.$lighter;
 }
 
 .mistral-content__heading2,
@@ -208,6 +213,12 @@ $spacer: 30px;
   padding-bottom: 35px;
 }
 
+.samba-content__buttons,
+.mistral-cotent__buttons{
+  display:flex;
+  justify-content: center;
+}
+
 .button {
   color: colors.$dark;
   background-color: colors.$beige;
@@ -221,11 +232,30 @@ $spacer: 30px;
 }
 
 @media screen and (max-width: 639px) {
-  .mistral-sinop {
+  .mistral-sinop,
+  .mistral-content__buttons,
+  .sinop-content__buttons {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
+
+ .sinop-content__logo {
+  margin-left:0;
+ }
+
+ .mistral-content__logo{
+  margin-left:0;
+ }
+ .button{
+  margin-right:0;
+  margin-bottom: 20px;
+
+ }
+
 }
+
+
 /*------------------------------------------*/
 /*MISTRAL PAGE*/
 
@@ -417,14 +447,62 @@ input[type="radio"]:focus {
     margin-top: 10px;
   }
 }
+
+/*REFERENCE PAGE*/
+.reference {
+	position: relative;
+	background-color: colors.$beige;
+	border: 1px solid var(--okraj);
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s;
+}
+
+.reference:hover {
+	box-shadow: 0 6px 15px rgba(72, 52, 212, 0.15);
+	transform: translateY(-3px);
+}
+.reference__logo {
+	height: 100px;
+	position: relative;
+	padding: 10px;
+}
+
+.reference__logo img {
+	display: block;
+	width: 120px;
+  height: auto;
+	margin: 0 auto;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.reference__details {
+	padding: 40px 15px 15px 15px;
+	text-align: center;
+}
+
+.reference__details h5 {
+	margin: 0 0 3px 0;
+	font-size: 18px;
+	color: colors.$middle;
+}
+
+.reference{
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
 /*--------------------------------------------*/
 /*CONTACT PAGE*/
 
 @media screen and (max-width: 639px) {
   .contact {
     align-content: center;
+    min-width: 600px;
   }
 }
+
 
 //FOOTER
 
