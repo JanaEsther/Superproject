@@ -1,16 +1,6 @@
+@use 'colors';
 
-@use 'barvy';
-
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-:after,
-:before {
-  box-sizing: inherit;
-}
+@use 'stem';
 
 // písmo
 
@@ -18,23 +8,10 @@ $font-base: "Nunito Sans", sans-serif;
 $font-special: "Raleway", sans-serif;
 $spacer: 30px;
 
-//nadpisy
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-special;
-  line-height: 1.25;
-  color: barvy.$darker;
-}
-
 .main__heading1 {
   font-size: 32px;
   font-family: $font-special;
-  color: barvy.$darker;
+  color: colors.$darker;
   font-weight: 500;
   text-align: center;
 }
@@ -44,23 +21,17 @@ h6 {
   padding: 40px 30px;
 }
 
-body{
-  font-family: $font-base;
-  font-size: 16px;
-}
-
-
 //MAIN SECTION WITH BIG BACKGROUND PICTURE
 
 .index {
   background-image: linear-gradient(
     to right,
-    barvy.$dark,
-    barvy.$darker,
-    barvy.$middle,
-    barvy.$lighter,
-    barvy.$light,
-    barvy.$bluish
+    colors.$dark,
+    colors.$darker,
+    colors.$middle,
+    colors.$lighter,
+    colors.$light,
+    colors.$bluish
   );
 }
 
@@ -105,24 +76,24 @@ body{
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: barvy.$beige;
+  background-color: colors.$beige;
 }
 
 .menu__item {
-  border-bottom: 1px solid barvy.$darker;
+  border-bottom: 1px solid colors.$darker;
 }
 
 .menu__link {
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: barvy.$darker;
+  color: colors.$darker;
   font-family: $font-special;
   font-weight: 500;
 }
 
 .menu__link:hover {
-  background-color: barvy.$light;
+  background-color: colors.$light;
   color: white;
 }
 
@@ -140,7 +111,7 @@ body{
     list-style: none;
     line-height: 1;
     display: flex !important;
-    background-color: barvy.$beige;
+    background-color: colors.$beige;
   }
 
   .menu__item {
@@ -150,11 +121,11 @@ body{
   .menu__link {
     display: block;
     padding: 10px 15px;
-    color: barvy.$darker;
+    color: colors.$darker;
     text-decoration: none;
     font-size: larger;
     font-weight: 700;
-    border-right: 1px solid barvy.$darker;
+    border-right: 1px solid colors.$darker;
   }
 }
 /*-----------------------------------------------------------------------*/
@@ -238,15 +209,15 @@ body{
 }
 
 .button {
-  color: $dark;
-  background-color: barvy.$beige;
+  color: colors.$dark;
+  background-color: colors.$beige;
   font-weight: 400;
   padding: 15px 20px;
   margin-right: 20px;
   border: 0;
   border-radius: 5px;
   margin-bottom: 80px;
-  box-shadow: 0px 3px 3px -3px barvy.$lighter;
+  box-shadow: 0px 3px 3px -3px colors.$lighter;
 }
 
 @media screen and (max-width: 639px) {
@@ -277,11 +248,11 @@ body{
 
 .mistral__obsah {
   display: flex;
-  padding: 80px 30px barvy.$bluish;
-  border: 2px solid barvy.$bluish;
+  padding: 80px 30px colors.$bluish;
+  border: 2px solid colors.$bluish;
   border-radius: 10px;
   justify-content: center;
-  box-shadow: 0px 5px 5px -5px barvy.$bluish;
+  box-shadow: 0px 5px 5px -5px colors.$bluish;
   margin: 20px 0;
 }
 
@@ -293,11 +264,11 @@ body{
 .mistral__text {
   flex: 0 0 30%;
   margin-right: 40px;
-  background-color: barvy.$bluish;
+  background-color: colors.$bluish;
   padding: 50px 30px;
   border: 0;
   border-radius: 10px;
-  box-shadow: 0px 3px 3px -3px barvy.$bluish;
+  box-shadow: 0px 3px 3px -3px colors.$bluish;
 }
 
 .img__mistral_historie2 {
@@ -318,11 +289,11 @@ body{
 
 .mistral__text_map {
   width: 20%;
-  background-color: barvy.$bluish;
+  background-color: colors.$bluish;
   padding: 20px 30px;
   border: 0;
   border-radius: 10px;
-  box-shadow: 0px 3px 3px -3px barvy.$bluish;
+  box-shadow: 0px 3px 3px -3px colors.$bluish;
 }
 
 .mistral__map {
@@ -334,10 +305,10 @@ body{
 
 .faq__heading3 {
   font-weight: 400px;
-  background-color: barvy.$bluish;
+  background-color: colors.$bluish;
   font-family: $font-special;
   padding: 10px 5px;
-  box-shadow: 0px 3px 3px -3px barvy.$bluish;
+  box-shadow: 0px 3px 3px -3px colors.$bluish;
 }
 /*ENQUIRY - QUESTIONS PAGE*/
 
@@ -355,7 +326,7 @@ form {
 .form-field number,
 .form-field tel {
   width: 100%;
-  border: 1px solid barvy.$darker;
+  border: 1px solid colors.$darker;
   border-radius: 4px;
   font-size: 16px;
   padding: 5px 20px;
@@ -367,19 +338,19 @@ form {
 .form-field input[type="tel"]:focus,
 .form-field textarea:focus {
   outline: 0;
-  border: 2px solid barvy.$light;
+  border: 2px solid colors.$light;
   background-color: #edf3f7;
 }
 
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
-  outline-color: barvy.$light;
+  outline-color: colors.$light;
 }
 
 .form-field label {
   display: block;
   font-size: 16px;
-  color: barvy.$dark;
+  color: colors.$dark;
 }
 
 .required {
@@ -397,18 +368,18 @@ input[type="radio"]:focus {
 }
 
 .form-checkbox input:checked + label {
-  color: barvy.$light;
+  color: colors.$light;
   font-weight: bold;
 }
 
 .form-text {
   font-family: $font-base;
   font-size: 16px;
-  color: barvy.$dark;
+  color: colors.$dark;
 }
 
 .button-submit {
-  background-color:barvy.$light;
+  background-color: colors.$light;
   color: white;
   border: 0;
   border-radius: 4px;
@@ -418,7 +389,7 @@ input[type="radio"]:focus {
 }
 
 .button-submit:hover {
-  background-color: barvy.$middle;
+  background-color: colors.$middle;
 }
 
 @media screen and (min-width: 640px) {
@@ -455,14 +426,12 @@ input[type="radio"]:focus {
   }
 }
 
-
-
 //FOOTER
 
 .footer {
   padding: 3px;
-  background-color: barvy.$beige;
-  color: barvy.$darker;
+  background-color: colors.$beige;
+  color: colors.$darker;
   text-align: center;
   font-weight: bold;
 }
