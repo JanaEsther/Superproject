@@ -1,3 +1,7 @@
+
+@use 'barvy';
+
+
 html {
   box-sizing: border-box;
 }
@@ -8,14 +12,8 @@ html {
   box-sizing: inherit;
 }
 
-//barvy, písmo
-$dark: #13293d;
-$darker: #006494;
-$middle: #247ba0;
-$lighter: #247ba0;
-$light: #1b98e0;
-$bluish: #f5f5f5;
-$beige: #f2eeee;
+// písmo
+
 $font-base: "Nunito Sans", sans-serif;
 $font-special: "Raleway", sans-serif;
 $spacer: 30px;
@@ -30,33 +28,45 @@ h5,
 h6 {
   font-family: $font-special;
   line-height: 1.25;
-  color: $darker;
+  color: barvy.$darker;
 }
 
 .main__heading1 {
   font-size: 32px;
   font-family: $font-special;
-  color: $darker;
-  font-weight: 400;
+  color: barvy.$darker;
+  font-weight: 500;
   text-align: center;
 }
 
 .main {
   margin: 30px 50px;
   padding: 40px 30px;
+}
+
+body{
   font-family: $font-base;
   font-size: 16px;
 }
 
+
 //MAIN SECTION WITH BIG BACKGROUND PICTURE
 
 .index {
-  background-image: url(images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 350px;
+  background-image: linear-gradient(
+    to right,
+    barvy.$dark,
+    barvy.$darker,
+    barvy.$middle,
+    barvy.$lighter,
+    barvy.$light,
+    barvy.$bluish
+  );
+}
+
+.main_uvod {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 //LOGO-HEADER
@@ -67,7 +77,7 @@ h6 {
   margin: 0;
   margin-right: 10px;
   padding: 0;
-  float:left;
+  float: left;
 }
 
 //HEADER
@@ -81,76 +91,71 @@ h6 {
 
 //MENU
 
-
-.menu__checkbox{
+.menu__checkbox {
   position: absolute;
   left: -9999px;
 }
 
-.menu__toggler{
+.menu__toggler {
   cursor: pointer;
 }
 
-.menu__list{
-  display:none;
-  margin:0;
-  padding:0;
-  list-style: none;
-  background-color: $beige;
-}
-
-.menu__item{
-  border-bottom: 1px solid $darker;
-}
-
-.menu__link{
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color:$darker;
-}
-
-.menu__link:hover{
-  background-color: $light;
-  color: white;
-}
-
-
-.menu__checkbox:checked ~ .menu__list{
-  display: block;
-}
-
-
-@media screen and (min-width: 700px){
-.menu__toggler{
- display: none; 
-}
 .menu__list {
+  display: none;
   margin: 0;
   padding: 0;
   list-style: none;
-  line-height: 1;
-  display: flex;
-  background-color: $beige;
-  
+  background-color: barvy.$beige;
 }
 
 .menu__item {
- 
-  border-bottom: 0;
+  border-bottom: 1px solid barvy.$darker;
 }
 
 .menu__link {
   display: block;
-  padding: 10px 15px;
-  color: $darker;
+  padding: 15px;
   text-decoration: none;
-  font-size: larger;
-  font-weight: 700;
-  border-right: 1px solid $darker;
+  color: barvy.$darker;
+  font-family: $font-special;
+  font-weight: 500;
 }
 
+.menu__link:hover {
+  background-color: barvy.$light;
+  color: white;
+}
 
+.menu__checkbox:checked ~ .menu__list {
+  display: block;
+}
+
+@media screen and (min-width: 700px) {
+  .menu__toggler {
+    display: none;
+  }
+  .menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1;
+    display: flex !important;
+    background-color: barvy.$beige;
+  }
+
+  .menu__item {
+    border-bottom: 0;
+  }
+
+  .menu__link {
+    display: block;
+    padding: 10px 15px;
+    color: barvy.$darker;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 700;
+    border-right: 1px solid barvy.$darker;
+  }
 }
 /*-----------------------------------------------------------------------*/
 /*INDEX PAGE*/
@@ -169,6 +174,7 @@ h6 {
   margin-bottom: 0;
   color: white;
   font-weight: 400;
+  padding-bottom: 40px;
 }
 
 .index-content {
@@ -224,23 +230,30 @@ h6 {
 }
 
 .mistral-content__products {
-  margin: 0;
+  padding-bottom: 20px;
 }
 
 .sinop-content__products {
-  padding-bottom: 20px;
+  padding-bottom: 35px;
 }
 
 .button {
   color: $dark;
-  background-color: $beige;
+  background-color: barvy.$beige;
   font-weight: 400;
   padding: 15px 20px;
   margin-right: 20px;
   border: 0;
   border-radius: 5px;
   margin-bottom: 80px;
-  box-shadow: 0px 3px 3px -3px $lighter;
+  box-shadow: 0px 3px 3px -3px barvy.$lighter;
+}
+
+@media screen and (max-width: 639px) {
+  .mistral-sinop {
+    display: flex;
+    flex-direction: column;
+  }
 }
 /*------------------------------------------*/
 /*MISTRAL PAGE*/
@@ -264,11 +277,11 @@ h6 {
 
 .mistral__obsah {
   display: flex;
-  padding: 80px 30px $bluish;
-  border: 2px solid $bluish;
+  padding: 80px 30px barvy.$bluish;
+  border: 2px solid barvy.$bluish;
   border-radius: 10px;
   justify-content: center;
-  box-shadow: 0px 5px 5px -5px $bluish;
+  box-shadow: 0px 5px 5px -5px barvy.$bluish;
   margin: 20px 0;
 }
 
@@ -280,11 +293,11 @@ h6 {
 .mistral__text {
   flex: 0 0 30%;
   margin-right: 40px;
-  background-color: $bluish;
+  background-color: barvy.$bluish;
   padding: 50px 30px;
   border: 0;
   border-radius: 10px;
-  box-shadow: 0px 3px 3px -3px $bluish;
+  box-shadow: 0px 3px 3px -3px barvy.$bluish;
 }
 
 .img__mistral_historie2 {
@@ -294,23 +307,22 @@ h6 {
 
 .img__mistral_tovarna,
 .img__mistral_budova,
-.img__mistral_letiste{
+.img__mistral_letiste {
   height: 300px;
-  width:auto;
+  width: auto;
 }
 
-.img__mistral_budova{
+.img__mistral_budova {
   margin-right: 30px;
 }
 
 .mistral__text_map {
   width: 20%;
-  background-color: $bluish;
+  background-color: barvy.$bluish;
   padding: 20px 30px;
   border: 0;
   border-radius: 10px;
-  box-shadow: 0px 3px 3px -3px $bluish;
-  
+  box-shadow: 0px 3px 3px -3px barvy.$bluish;
 }
 
 .mistral__map {
@@ -322,10 +334,10 @@ h6 {
 
 .faq__heading3 {
   font-weight: 400px;
-  background-color: $bluish;
+  background-color: barvy.$bluish;
   font-family: $font-special;
   padding: 10px 5px;
-  box-shadow: 0px 3px 3px -3px $bluish;
+  box-shadow: 0px 3px 3px -3px barvy.$bluish;
 }
 /*ENQUIRY - QUESTIONS PAGE*/
 
@@ -343,7 +355,7 @@ form {
 .form-field number,
 .form-field tel {
   width: 100%;
-  border: 1px solid $darker;
+  border: 1px solid barvy.$darker;
   border-radius: 4px;
   font-size: 16px;
   padding: 5px 20px;
@@ -355,19 +367,19 @@ form {
 .form-field input[type="tel"]:focus,
 .form-field textarea:focus {
   outline: 0;
-  border: 2px solid $light;
+  border: 2px solid barvy.$light;
   background-color: #edf3f7;
 }
 
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
-  outline-color: $light;
+  outline-color: barvy.$light;
 }
 
 .form-field label {
   display: block;
   font-size: 16px;
-  color: $dark;
+  color: barvy.$dark;
 }
 
 .required {
@@ -384,19 +396,19 @@ input[type="radio"]:focus {
   height: 15px;
 }
 
-.form-checkbox input:checked + label{
-  color: $light;
+.form-checkbox input:checked + label {
+  color: barvy.$light;
   font-weight: bold;
 }
 
 .form-text {
   font-family: $font-base;
   font-size: 16px;
-  color: $dark;
+  color: barvy.$dark;
 }
 
 .button-submit {
-  background-color: $light;
+  background-color:barvy.$light;
   color: white;
   border: 0;
   border-radius: 4px;
@@ -406,14 +418,14 @@ input[type="radio"]:focus {
 }
 
 .button-submit:hover {
-  background-color: $middle;
+  background-color: barvy.$middle;
 }
 
-@media screen and (min-width: 640px){
-  form{
+@media screen and (min-width: 640px) {
+  form {
     max-width: 300px;
   }
-} 
+}
 
 @media screen and (min-width: 1100px) {
   form {
@@ -437,25 +449,20 @@ input[type="radio"]:focus {
 /*--------------------------------------------*/
 /*CONTACT PAGE*/
 
-.contact{
-  display: flex;
+@media screen and (max-width: 639px) {
+  .contact {
+    align-content: center;
+  }
 }
 
-.contact__obsah{
-  flex: 0 0 flex 25% - 20px;
-}
-
-img__contact-write{
-  margin-left: 20px;
-}
 
 
 //FOOTER
 
 .footer {
   padding: 3px;
-  background-color: $beige;
-  color: $darker;
+  background-color: barvy.$beige;
+  color: barvy.$darker;
   text-align: center;
   font-weight: bold;
 }
