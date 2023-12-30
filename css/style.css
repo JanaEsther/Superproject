@@ -136,7 +136,7 @@ h6 {
   color: white;
   font-weight: 500;
   padding-top: 100px;
-  box-shadow: 0px 3px 3px -3px white;
+  text-shadow: 1px 1px white, 2px 2px white, 2px 2px white;
 }
 
 .heading2 {
@@ -145,7 +145,6 @@ h6 {
   color: white;
   font-weight: 500;
   padding-bottom: 40px;
-  box-shadow: 0px 3px 3px -3px white;
 }
 
 .index-content {
@@ -289,6 +288,11 @@ h6 {
   box-shadow: 0px 3px 3px -3px #f5f5f5;
 }
 
+.videostext {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 .img__mistral_historie2 {
   margin-right: 40px;
   margin-left: 200px;
@@ -318,6 +322,36 @@ h6 {
   margin-bottom: 20px;
 }
 
+/*---------------------------------------------------------------------------*/
+/* PRODUKTY PAGE*/
+.products__img {
+  height: 300px;
+  width: auto;
+}
+
+.sloup {
+  height: 450px;
+  width: auto;
+}
+
+@media screen and (max-width: 639px) {
+  .products {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 640px) {
+  .products {
+    text-align: center;
+    align-items: center;
+  }
+  .firms__obsah {
+    display: flex;
+    justify-content: baseline;
+    margin-bottom: 50px;
+    text-align: center;
+    align-items: center;
+  }
+}
 /*FAQ PAGE*/
 .faq__heading3 {
   font-weight: 400;
@@ -325,6 +359,10 @@ h6 {
   font-family: "Raleway", sans-serif;
   padding: 10px 5px;
   box-shadow: 0px 3px 3px -3px #f5f5f5;
+}
+
+.margin {
+  margin-bottom: 30px;
 }
 
 /*ENQUIRY - QUESTIONS PAGE*/
@@ -430,10 +468,6 @@ input[type=radio]:focus {
   }
 }
 /*REFERENCE PAGE*/
-.ref main__heading1 {
-  display: block;
-}
-
 .reference {
   position: relative;
   background-color: #f2eeee;
@@ -449,7 +483,7 @@ input[type=radio]:focus {
 }
 
 .reference__logo {
-  height: 120px;
+  height: 140px;
   position: relative;
   padding: 10px;
   margin-top: 10px;
@@ -457,17 +491,28 @@ input[type=radio]:focus {
 
 .reference__logo img {
   display: block;
-  width: 120px;
+  width: 130px;
   height: auto;
   margin: 0 auto;
 }
 
 .reference__details {
-  padding: 40px 20px 20px 20px;
+  padding: 30px 20px 20px 20px;
+  text-align: center;
+}
+
+.reference__details--high {
+  padding: 10px 20px 20px 20px;
   text-align: center;
 }
 
 .reference__details h5 {
+  margin: 0 0 3px 0;
+  font-size: 18px;
+  color: #247ba0;
+}
+
+.reference__details--high h5 {
   margin: 0 0 3px 0;
   font-size: 18px;
   color: #247ba0;
@@ -483,6 +528,25 @@ input[type=radio]:focus {
   padding: 10px;
   font-size: 13px;
   text-align: center;
+}
+
+.reference__logo--small img {
+  height: 120px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 30px;
+}
+
+.high {
+  padding-top: 50px;
+}
+
+.mid {
+  padding-top: 40px;
+}
+
+.low {
+  padding-bottom: 5px;
 }
 
 /*--------------------------------------------*/
