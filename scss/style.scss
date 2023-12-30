@@ -11,7 +11,7 @@
   color: colors.$darker;
   font-weight: 500;
   text-align: center;
-  
+
 
 }
 
@@ -139,13 +139,11 @@
   color: white;
   font-weight: 500;
   padding-top: 100px;
-  text-shadow: 1px 1px white, 
-               2px 2px white, 
-               2px 2px white;
-  
+  text-shadow: 1px 1px white,
+    2px 2px white,
+    2px 2px white;
+
 }
-
-
 
 .heading2 {
   font-size: 24px;
@@ -153,7 +151,7 @@
   color: white;
   font-weight: 500;
   padding-bottom: 40px;
-  
+
 }
 
 .index-content {
@@ -260,6 +258,18 @@
   }
 
 }
+/*--------------------------------------------------------------*/
+/*O NÁS PAGE*/
+
+.year{
+  color:$darker;
+  font-weight: bold;
+}
+
+.history__img img{
+height: 225px;
+width: auto;
+}
 
 
 /*------------------------------------------*/
@@ -307,7 +317,7 @@
   box-shadow: 0px 3px 3px -3px colors.$bluish;
 }
 
-.videostext{
+.videostext {
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -341,45 +351,46 @@
   margin-bottom: 20px;
 
 }
+
 /*---------------------------------------------------------------------------*/
 /* PRODUKTY PAGE*/
 
 
-.products__img{ 
-  height:300px;
-  width:auto;
+.products__img {
+  height: 300px;
+  width: auto;
 }
 
-.sloup{
-  height:450px;
-  width:auto;
+.sloup {
+  height: 450px;
+  width: auto;
 }
 
-@media screen and (max-width: 639px){
-  .products{
+@media screen and (max-width: 639px) {
+  .products {
     text-align: center;
   }
-  
+
 }
 
-@media screen and (min-width: 640px){
+@media screen and (min-width: 640px) {
 
-  .products{
+  .products {
     text-align: center;
     align-items: center;
   }
 
- .firms__obsah{
-  display:flex;
-  justify-content:baseline;
-  margin-bottom: 50px;
-  text-align: center;
-  align-items: center;
-  
- } 
- 
+  .firms__obsah {
+    display: flex;
+    justify-content: baseline;
+    margin-bottom: 50px;
+    text-align: center;
+    align-items: center;
 
-} 
+  }
+
+
+}
 
 
 
@@ -393,9 +404,9 @@
   box-shadow: 0px 3px 3px -3px colors.$bluish;
 }
 
-.margin{
- margin-bottom:30px;
- }
+.margin {
+  margin-bottom: 30px;
+}
 
 
 /*ENQUIRY - QUESTIONS PAGE*/
@@ -489,7 +500,7 @@ input[type="radio"]:focus {
 
 @media screen and (min-width: 1100px) {
   form {
-    width:100%;
+    width: 100%;
     max-width: 1100px;
   }
 
@@ -499,11 +510,11 @@ input[type="radio"]:focus {
 
   }
 
-  .form-field_half{
+  .form-field_half {
     flex: 0 0 50%;
   }
 
-  .first{
+  .first {
     margin-right: 70px;
   }
 
@@ -571,29 +582,29 @@ input[type="radio"]:focus {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-.reference__link{
+.reference__link {
   padding: 10px;
   font-size: 13px;
-  text-align:center;
+  text-align: center;
 }
 
-.reference__logo--small img{
+.reference__logo--small img {
   height: 120px;
   margin: 0 auto;
   display: block;
   padding-top: 30px;
 }
 
-.high{
+.high {
   padding-top: 50px;
-  }
-
-.mid{
-  padding-top:40px;
 }
 
-.low{
-  padding-bottom:5px;
+.mid {
+  padding-top: 40px;
+}
+
+.low {
+  padding-bottom: 5px;
 }
 
 /*--------------------------------------------*/
