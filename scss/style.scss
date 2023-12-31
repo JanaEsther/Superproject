@@ -1,18 +1,15 @@
-@use 'colors';
+@use "colors";
 
-@use 'stem';
+@use "stem";
 
 // písmo
 
-
 .main__heading1 {
   font-size: 32px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: colors.$darker;
   font-weight: 500;
   text-align: center;
-
-
 }
 
 .main {
@@ -23,13 +20,15 @@
 //MAIN SECTION WITH BIG BACKGROUND PICTURE
 
 .index {
-  background-image: linear-gradient(to right,
-      colors.$dark,
-      colors.$darker,
-      colors.$middle,
-      colors.$lighter,
-      colors.$light,
-      colors.$bluish );
+  background-image: linear-gradient(
+    to right,
+    colors.$dark,
+    colors.$darker,
+    colors.$middle,
+    colors.$lighter,
+    colors.$light,
+    colors.$bluish
+  );
 }
 
 .main_uvod {
@@ -55,7 +54,6 @@
   align-items: center;
   justify-content: center;
   max-width: 100%;
-
 }
 
 //MENU
@@ -85,10 +83,10 @@
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: colors.$darker;
-  font-family: 'Raleway', sans-serif;
-  ;
-  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  font-size: larger;
+  font-weight: 700;
+  border-right: 1px solid colors.$darker;
 }
 
 .menu__link:hover {
@@ -96,7 +94,7 @@
   color: white;
 }
 
-.menu__checkbox:checked~.menu__list {
+.menu__checkbox:checked ~ .menu__list {
   display: block;
 }
 
@@ -134,15 +132,12 @@
 //HEADINGS
 .heading1 {
   font-size: 52px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   margin-top: 0;
   color: white;
   font-weight: 500;
   padding-top: 100px;
-  text-shadow: 1px 1px white,
-    2px 2px white,
-    2px 2px white;
-
+  text-shadow: 1px 1px white, 2px 2px white, 2px 2px white;
 }
 
 .heading2 {
@@ -151,7 +146,6 @@
   color: white;
   font-weight: 500;
   padding-bottom: 40px;
-
 }
 
 .index-content {
@@ -234,7 +228,9 @@
 }
 
 @media screen and (max-width: 639px) {
-
+  .index-content {
+    display: none;
+  }
   .mistral-sinop,
   .mistral-content__buttons,
   .sinop-content__buttons {
@@ -243,34 +239,38 @@
     justify-content: center;
   }
 
-  .sinop-content__logo {
-    margin-left: 0;
+  .mistral-content {
+    margin: 0;
   }
 
+  .sinop-content__logo,
   .mistral-content__logo {
-    margin-left: 0;
+    margin-left: 120px;
   }
 
   .button {
     margin-right: 0;
     margin-bottom: 20px;
-
   }
-
 }
 /*--------------------------------------------------------------*/
 /*O NÁS PAGE*/
 
-.year{
-  color:$darker;
+.year {
+  color: colors.$darker;
   font-weight: bold;
 }
 
-.history__img img{
-height: 225px;
-width: auto;
+.year--2002 {
+  padding-left: 30px;
 }
 
+.history__img img {
+  height: 300px;
+  width: auto;
+  padding-top: 20px;
+  padding-bottom: 0;
+}
 
 /*------------------------------------------*/
 /*MISTRAL PAGE*/
@@ -317,6 +317,14 @@ width: auto;
   box-shadow: 0px 3px 3px -3px colors.$bluish;
 }
 
+.mistral__text:hover,
+.mistral__text_map:hover{
+  transition: all 0.3s ease 0s;
+  box-shadow: 0 6px 15px rgba(72, 52, 212, 0.15);
+  transform: translateY(-3px);
+}
+
+
 .videostext {
   margin-right: 20px;
   margin-left: 20px;
@@ -336,6 +344,11 @@ width: auto;
 
 .img__mistral_budova {
   margin-right: 30px;
+  margin-top: 30px;
+}
+
+.img__mistral_tovarna {
+  margin-top: 30px;
 }
 
 .mistral__text_map {
@@ -349,12 +362,120 @@ width: auto;
 
 .mistral__map {
   margin-bottom: 20px;
+}
+.bold_extra {
+  font-weight: 800;
+}
+
+@media screen and (max-width: 639px) {
+  .mistral__obsah {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .mistral__text {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .bigpic {
+    width: 200px;
+    height: auto;
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  .smallpic {
+    width: 300px;
+    height: auto;
+  }
+
+  .mistral__video {
+    width: 90%;
+    height: 90%;
+    margin-bottom: 20px;
+  }
+
+  .mistral__map {
+    width: 90%;
+    height: 90%;
+    margin-bottom: 20px;
+  }
+  .mistral__text_map {
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+}
+
+@media screen and ( min-width: 640px) and (max-width: 1099px){
+  .mistral__obsah{
+    flex-direction: row;
+    padding: 20px 10px;
+    width: 100%;
+  }
+.mistral__text{
+  flex: 0 0 50%;
+  margin-left: 50px;
+}
+.mistral__video {
+  width: 90%;
+  height: 90%;
+  align-items: center;
+  margin: 20px 10px 20px 50px; 
+}
+.mistral__map {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.mistral__text_map{
+  margin:0;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+.bigpic {
+  height: 250px;
+  width:auto;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+.smallpic{
+  margin-left: 100px;
+}
+
+.column{
+  flex-direction: column;
+}
+
+.img__mistral_letiste{
+  width: 600px;
+  height:auto;
+  margin-left: 100px;
+}
+
+.obsah__video{
+  display:flex;
+  flex-direction: column;
 
 }
+.videostext{
+  margin-left:15px;
+}
+}
+.img__mistral_tovarna{
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+
 
 /*---------------------------------------------------------------------------*/
 /* PRODUKTY PAGE*/
-
 
 .products__img {
   height: 300px;
@@ -367,14 +488,16 @@ width: auto;
 }
 
 @media screen and (max-width: 639px) {
-  .products {
+  .main {
     text-align: center;
   }
-
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 640px)and (max-width: 1099px){
 
+  .main {
+    text-align: center;
+  }
   .products {
     text-align: center;
     align-items: center;
@@ -386,20 +509,75 @@ width: auto;
     margin-bottom: 50px;
     text-align: center;
     align-items: center;
+  }
 
+.firms__products--1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.firms__products__1a{
+  display: flex;
+}
+}
+
+@media screen and (min-width: 1100px) {
+  .products{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows:min-content;
+    margin-left: 60px;
+  }
+
+  .firms__text,
+  .home__text,
+  .soda__text{
+   width: 70%;
+   margin-bottom: 40px;
+   
+  }
+
+ .margin{
+  margin-top: 150px;  
+ } 
+ .samba__heading3{
+  margin-top: 40px;
+  }
+
+.soda-sloup{
+  margin:20px 0;
+  
+  }
+.low__heading3{
+  margin-top: 20px;
+}
+.lower{
+  margin-top:50px;
   }
 
 
+.pasloup{
+  margin-top: 30px;
 }
-
+.purehome{
+  align-items:left;
+  margin-top: 40px;
+}
+.extra{
+  margin-top: 50px;
+}
+.softdown{
+  margin-bottom: 40px;
+}
+}
 
 
 /*FAQ PAGE*/
 
 .faq__heading3 {
-  font-weight: 400;
+  font-weight: bolder;
   background-color: colors.$bluish;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   padding: 10px 5px;
   box-shadow: 0px 3px 3px -3px colors.$bluish;
 }
@@ -407,7 +585,6 @@ width: auto;
 .margin {
   margin-bottom: 30px;
 }
-
 
 /*ENQUIRY - QUESTIONS PAGE*/
 
@@ -452,7 +629,6 @@ input[type="radio"]:focus {
   color: colors.$dark;
 }
 
-
 .required {
   color: red;
 }
@@ -467,13 +643,13 @@ input[type="radio"]:focus {
   height: 15px;
 }
 
-.form-checkbox input:checked+label {
+.form-checkbox input:checked + label {
   color: colors.$light;
   font-weight: bold;
 }
 
 .form-text {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: colors.$dark;
 }
@@ -484,8 +660,9 @@ input[type="radio"]:focus {
   border: 0;
   border-radius: 4px;
   padding: 10px 25px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .button-submit:hover {
@@ -494,8 +671,7 @@ input[type="radio"]:focus {
 
 .form-heading4 {
   color: colors.$darker;
-  font-family: 'Raleway', sans-serif;
-  ;
+  font-family: "Raleway", sans-serif;
 }
 
 @media screen and (min-width: 1100px) {
@@ -507,7 +683,6 @@ input[type="radio"]:focus {
   .form-field_whole {
     display: flex;
     margin-left: 300px;
-
   }
 
   .form-field_half {
@@ -517,12 +692,13 @@ input[type="radio"]:focus {
   .first {
     margin-right: 70px;
   }
-
 }
-
 
 /*REFERENCE PAGE*/
 
+.ref_heading1{
+  margin-bottom: 30px;
+}
 
 .reference {
   position: relative;
@@ -557,11 +733,9 @@ input[type="radio"]:focus {
   text-align: center;
 }
 
-
 .reference__details--high {
   padding: 10px 20px 20px 20px;
   text-align: center;
-
 }
 
 .reference__details h5 {
@@ -607,18 +781,84 @@ input[type="radio"]:focus {
   padding-bottom: 5px;
 }
 
+.reference__nadpish5 {
+  padding-top: 20px;
+}
+
+.reference__nadpish5a {
+  padding-top: 30px;
+}
+
 /*--------------------------------------------*/
 /*CONTACT PAGE*/
 
+.bold {
+  font-weight: bolder;
+}
+
 @media screen and (max-width: 639px) {
-  .contact {
+  .main {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    width: 639px;
+    max-width: 100%;
+  }
+  .contact-page {
     align-content: center;
+    text-align: center;
     min-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .contact__heading1 {
+    text-align: center;
+  }
+
+  .footer {
+    width: 639px;
+    max-width: 100%;
   }
 }
 
+@media screen and (max-width: 1099px) {
+  .contact-page {
+    align-content: center;
+    text-align: center;
+    min-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+  }
 
+  .contact__heading1 {
+    text-align: center;
+  }
 
+  .footer {
+    width: 639px;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .main {
+    margin: 30px 50px;
+    padding: 40px 30px;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    margin-left: 50px;
+  }
+
+  .contact__map {
+    width: 550px;
+    height: 383px;
+  }
+}
 
 //FOOTER
 
