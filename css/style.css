@@ -283,6 +283,26 @@ h6 {
   padding-bottom: 0;
 }
 
+@media screen and (max-width: 639px) {
+  .onas__main {
+    padding: 0 10px;
+  }
+  .history__img img {
+    height: 200px;
+  }
+  .wide img {
+    height: 180px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .history__content {
+    display: flex;
+  }
+  .box__img {
+    flex: 0 0 25%;
+    margin-left: 10px;
+  }
+}
 /*------------------------------------------*/
 /*MISTRAL PAGE*/
 .mistral__heading2 {
@@ -531,13 +551,13 @@ h6 {
     margin-top: 150px;
   }
   .samba__heading3 {
-    margin-top: 40px;
+    margin-top: 50px;
   }
   .soda-sloup {
     margin: 20px 0;
   }
   .low__heading3 {
-    margin-top: 20px;
+    margin-top: 70px;
   }
   .lower {
     margin-top: 50px;
@@ -547,13 +567,13 @@ h6 {
   }
   .purehome {
     align-items: left;
-    margin-top: 40px;
+    margin-top: 50px;
   }
   .extra {
     margin-top: 50px;
   }
   .softdown {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 }
 /*FAQ PAGE*/
