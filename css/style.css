@@ -250,6 +250,21 @@ h6 {
     margin-bottom: 20px;
   }
 }
+@media screen and (min-width: 640px) and (max-width: 1099px) {
+  .sinop-content__logo,
+  .mistral-content__logo {
+    margin-left: 80px;
+  }
+  .sinop-content__heading2 {
+    margin-top: 60px;
+  }
+  .mistral-content {
+    margin-right: 80px;
+  }
+  .sinop-content {
+    margin-right: 30px;
+  }
+}
 /*--------------------------------------------------------------*/
 /*O NÁS PAGE*/
 .year {
