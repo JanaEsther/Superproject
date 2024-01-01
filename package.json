@@ -1,0 +1,16 @@
+{
+  "name": "superproject",
+  "version": "1.0.0",
+  "description": "web H2o s.r.o.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Jana Obendraufova",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
