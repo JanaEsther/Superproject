@@ -566,14 +566,13 @@ h6 {
     margin-top: 30px;
   }
   .purehome {
-    align-items: left;
-    margin-top: 50px;
+    margin-top: 100px;
   }
   .extra {
     margin-top: 50px;
   }
   .softdown {
-    margin-bottom: 10px;
+    margin-bottom: -80px;
   }
 }
 /*FAQ PAGE*/
@@ -786,6 +785,11 @@ input[type=radio]:focus {
   padding-top: 30px;
 }
 
+@media screen and (max-width: 639px) {
+  .footer {
+    margin-top: 20px;
+  }
+}
 /*--------------------------------------------*/
 /*CONTACT PAGE*/
 .bold {
