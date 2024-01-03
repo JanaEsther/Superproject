@@ -31,7 +31,7 @@
   );
 }
 
-.main_uvod {
+.index-content {
   padding-top: 0;
   margin-top: 0;
 }
@@ -860,6 +860,8 @@ input[type="radio"]:focus {
     width: 639px;
     max-width: 100%;
   }
+
+
 }
 
 @media screen and (max-width: 1099px) {
@@ -893,9 +895,14 @@ input[type="radio"]:focus {
     margin-left: 50px;
   }
 
-  .contact__map {
-    width: 550px;
-    height: 383px;
+ 
+  .interpramen__foto{
+    padding-top: 25px;
+    height: 335px;
+
+   .interpramen__foto{
+    max-width: 40%;
+   } 
   }
 }
 

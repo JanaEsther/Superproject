@@ -42,7 +42,7 @@ h6 {
   background-image: linear-gradient(to right, #13293d, #006494, #247ba0, #247ba0, #1b98e0, #f5f5f5);
 }
 
-.main_uvod {
+.index-content {
   padding-top: 0;
   margin-top: 0;
 }
@@ -845,9 +845,12 @@ input[type=radio]:focus {
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     margin-left: 50px;
   }
-  .contact__map {
-    width: 550px;
-    height: 383px;
+  .interpramen__foto {
+    padding-top: 25px;
+    height: 335px;
+  }
+  .interpramen__foto .interpramen__foto {
+    max-width: 40%;
   }
 }
 .footer {
