@@ -7,10 +7,8 @@ foto1: carbon.jpg
 alt1: Granulovaný aktivní uhlík ze skořápek kokosových ořechů
 foto2: filter-block.jpg
 alt2: Filtr SBAC
-
+tags: blog
 ---
-
-
 
 Rozlišujeme dva základní typy filtrů: **sediment filtry** a **filtry z aktivního uhlíku**, které mohou být použity samostatně nebo v některých případech současně v jednom přístroji.
 
@@ -36,7 +34,7 @@ Keramické filtry nezachycují látky rozpuštěné ve vodě, jsou chlór, olovo
 
 Aktivní uhlík *( activated carbon – AC)* jsou částice uhlíku upravené, tak aby měly větší absobční povrch a tím také zvýšenou schopnost na tento povrch vázat široké spektrum látek. Filtry z aktivního uhlíku jsou především velmi účinné v absorpci organických látek. Rozlišujeme dva základní typy těchto filtrů : **GAC** (*Granular Activated Carbon*) a **SBAC** (*Solid Block Activated Carbon*).
 
-#### AC litry odnímají kontaminující látky v podstatě dvěma způsoby:
+#### AC litry odnímají kontaminující látky v podstatě dvěma způsoby
 
 **1/ mechanickým zachycením drobných částic**, které mají větší průměr než póry filtru ( filtry s menšími póry jsou více účinné).
 

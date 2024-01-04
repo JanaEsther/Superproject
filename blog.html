@@ -5,4 +5,12 @@ title: Blog
 
 <h1>Blog</h1>
 
-<p>Tady bude seznam článků.</p>
+{% for prispevek in collections.blog %} 
+
+<h2>{{ prispevek.data.title }}</h2> 
+
+<p>{{ prispevek.data.perex }}</p>
+
+<p><a href="{{ prispevek.url }}">celý článek</a></p>
+
+{% endfor %}

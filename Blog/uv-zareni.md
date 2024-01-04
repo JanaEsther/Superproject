@@ -3,6 +3,7 @@ layout: layouts/clanek.njk
 title: UV záření
 date: 2024-01-02T14:30
 perex: Ultrafialové záření je neviditelné elektromagnetické záření o vlnové délce 400 – 4 nm a frekvenci 1015 - 1017Hz.. Je součástí slunečního spektra ( méně než 5%) a nachází se mezi viditelným slunečním zářením a rentgenovými paprsky.Je také produkováno uměle obloukovými lampami např. rtuťovými.
+tags: blog
 ---
 
 
@@ -38,7 +39,6 @@ Ultrafialové záření je tvořeno třemi složkami: UVA,UVB a UVC.
 ### Proces
 
 1.Voda přitéká do nerezové nádrže, kde je vystavena UV záření.Nízkotlaká UV lampa – 11 W (výrobce firma Phillips,Holands) používaná pro tento typ germicidní dezinfekce je zdrojem záření o vlnové délce l = 253,7 nm, které zničí téměř 99,9% všech bakterií, protozoí, virů a jiných mikroorganismů.UV záření proniká ochrannou bariérou, kterou tvoří cytoplazmatická membrána, do jádra a napadá DNA, kterou fotochemicky poškodí a tím zastaví jakoukoli její další replikaci a napadená buňka odumírá.
-
 
 ![lampa](/images/lampa.jpg)
 
