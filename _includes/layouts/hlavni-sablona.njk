@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="cs">
+ {% include 'partials/head.njk' %}
+  <body>
+		<header class="header">
+			<img class="logo" src="/images/H2O_logo.svg" alt="logo H2O"/>
+
+    {% include 'partials/menu.njk' %}
+		
+		</header>			
+
+
+<main class="main">	
+
+{{ content | safe }}
+
+</main>		
+
+	{% include 'partials/footer.njk' %}
+ 	</body>
+</html>
