@@ -1,0 +1,35 @@
+---
+layout: layouts/hlavni-sablona.njk
+---
+<!DOCTYPE html>
+<html lang="cs">
+<!-- vložíme hlavičku stránky -->
+{% include 'partials/head.njk' %}
+
+<main class="main">
+
+<article class="article">
+
+	<h1 class="article__title">{{ title }}</h1>
+
+	<p class="article__meta">Publikováno {{ page.date.toLocaleString('cs-CZ') }}</p>
+	<div class="article__content">
+
+<div class="article__text">
+
+	<p class="article__perex">{{ perex }}</p>
+
+	{{ content | safe }}
+
+</div>
+ 
+	<img class="article__image" src="/images/{{ foto1 }}" alt="{{ alt1 }}">
+
+	<img class="article__image" src="/images/{{ foto2 }}" alt="{{ alt2 }}">	
+
+	</div>
+
+</article>	
+
+</main>
+
