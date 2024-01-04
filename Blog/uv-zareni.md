@@ -3,6 +3,8 @@ layout: layouts/clanek.njk
 title: UV záření
 date: 2024-01-02T14:30
 perex: Ultrafialové záření je neviditelné elektromagnetické záření o vlnové délce 400 – 4 nm a frekvenci 1015 - 1017Hz.. Je součástí slunečního spektra ( méně než 5%) a nachází se mezi viditelným slunečním zářením a rentgenovými paprsky.Je také produkováno uměle obloukovými lampami např. rtuťovými.
+foto: lampa.jpg
+alt: lampa
 tags: blog
 ---
 

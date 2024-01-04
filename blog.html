@@ -3,14 +3,19 @@ layout: layouts/hlavni-sablona.njk
 title: Blog
 ---
 
-<h1>Blog</h1>
+<h1 class="blog__heading">Blog</h1>
 
-{% for prispevek in collections.blog %} 
+{% for prispevek in collections.blog | reverse %}  
 
-<h2>{{ prispevek.data.title }}</h2> 
+<div class="clanek">
 
-<p>{{ prispevek.data.perex }}</p>
+<img src="/images/{{ prispevek.data.foto }}" alt="{{ prispevek.data.alt }}"> 
+<div class="clanek__popis"> 
+    <h2>{{ prispevek.data.title }}</h2> 
+    <p>{{ prispevek.data.perex }}</p>
+    <p><a href="{{ prispevek.url }}">celý článek</a></p>
+</div>
 
-<p><a href="{{ prispevek.url }}">celý článek</a></p>
+</div>
 
 {% endfor %}

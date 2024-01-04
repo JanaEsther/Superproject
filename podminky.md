@@ -3,6 +3,8 @@ layout: layouts/hlavni-sablona.njk
 title: Podmínky ochrany osobních údajů
 ---
 
+
+
 ## I. Ochrana osobních údajů
 
 1.1 Vložením osobních údajů potvrzuje uživatel, že je srozuměn s podmínkami ochrany osobních údajů, že vyjadřuje svůj souhlas s jejich zněním, a že je v celém rozsahu akceptuje.

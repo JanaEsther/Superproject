@@ -3,6 +3,8 @@ layout: layouts/clanek.njk
 title: Pitný režim
 date: 2024-01-02T17:00
 perex: Tekutiny  je třeba doplňovat ve správné a také v kvalitní formě pravidelně. Při nedostatečném pitném režimu dochází k dehydrataci organizmu, k hromadění škodlivin v těle a bohužel také ke kolapsům. Jak by měl správný pitný režim vypadat? Jaké nápoje preferovat a kterým se naopak vyhýbat? A jak rozložit pitný režim v průběhu dne? Čtěte prosím dál.
+foto: piti-vody.jpg
+alt: voda
 tags: blog
 ---
 

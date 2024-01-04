@@ -3,8 +3,8 @@ layout: layouts/clanek.njk
 title: Systém filtrace vody
 date: 2023-12-30T16:30
 perex: Problematika filtrů pro úpravu pitné vody je poměrně složitá, protože je mnoho typů – více jak 2500 vyráběných více jak 500 společnostmi a jaké také mnoho technologií filtrace a jejich nejrůznější kombinace, ale existuje základní jednoduchý koncept, který je společný velké většině z nich.Kontaminující látky jsou zachycovány uvnitř filtru pomocí velmi malých pórů a nebo, jak je tomu v případě uhlíkových filtrů, kdy se váží na aktivní povrch uhlíkových částic absorpcí.
-foto1: carbon.jpg
-alt1: Granulovaný aktivní uhlík ze skořápek kokosových ořechů
+foto: carbon.jpg
+alt: Granulovaný aktivní uhlík ze skořápek kokosových ořechů
 foto2: filter-block.jpg
 alt2: Filtr SBAC
 tags: blog
