@@ -89,7 +89,12 @@
   border-right: 1px solid colors.$darker;
 }
 
-.menu__link:hover {
+.menu__link:hover, .menu__link:focus{
+  background-color: colors.$light;
+  color: white;
+}
+
+.menu__item--active .menu__link {
   background-color: colors.$light;
   color: white;
 }

@@ -4,15 +4,15 @@
 			<label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
 
 			<ul class="menu__list">
-				<li class="menu__item"><a href="/" class="menu__link">Úvod</a></li>
-				<li class="menu__item"><a href="/onas/" class="menu__link">O nás</a></li>
-				<li class="menu__item"><a href="/mistral/" class="menu__link">Mistral Constructeur</a></li>
-				<li class="menu__item"><a href="/produkty/" class="menu__link">Produkty</a></li>
-				<li class="menu__item"><a href="/poptavky-dotazy/" class="menu__link">Poptávky - dotazy</a></li>
-				<li class="menu__item"><a href="/faq/" class="menu__link">FAQ</a></li>
-				<li class="menu__item"><a href="/reference/" class="menu__link">Reference</a></li>
-				<li class="menu__item"><a href="/blog/" class="menu__link">Blog</a></li>
-				<li class="menu__item"><a href="/podminky/" class="menu__link">GDPR</a></li>
-				<li class="menu__item"><a href="/kontakt/" class="menu__link">Kontakt</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === ''}}"><a href="/" class="menu__link">Úvod</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === 'onas'}}"><a href="/onas/" class="menu__link">O nás</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === mistral'}}"><a href="/mistral/" class="menu__link">Mistral Constructeur</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === 'produkty'}}"><a href="/produkty/" class="menu__link">Produkty</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === 'poptavky-dotazy'}}"><a href="/poptavky-dotazy/" class="menu__link">Poptávky - dotazy</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === 'faq'}}"><a href="/faq/" class="menu__link">FAQ</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === 'reference'}}"><a href="/reference/" class="menu__link">Reference</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === 'blog'}}"><a href="/blog/" class="menu__link">Blog</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === 'podminky'}}"><a href="/podminky/" class="menu__link">GDPR</a></li>
+				<li class="menu__item {{'menu__item--active' if page.fileSlug === 'kontakt'}}"><a href="/kontakt/" class="menu__link">Kontakt</a></li>
 					</ul>
 </nav>

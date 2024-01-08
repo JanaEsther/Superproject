@@ -95,7 +95,12 @@ h6 {
   border-right: 1px solid #006494;
 }
 
-.menu__link:hover {
+.menu__link:hover, .menu__link:focus {
+  background-color: #1b98e0;
+  color: white;
+}
+
+.menu__item--active .menu__link {
   background-color: #1b98e0;
   color: white;
 }
